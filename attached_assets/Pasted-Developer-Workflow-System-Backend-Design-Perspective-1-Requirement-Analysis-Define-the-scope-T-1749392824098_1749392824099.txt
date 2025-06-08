@@ -1,0 +1,125 @@
+Developer Workflow (System/Backend Design Perspective)
+1. Requirement Analysis
+Define the scope: Types of interviews (MCQ, subjective, viva).
+
+Identify user personas: Candidate, Admin/Recruiter.
+
+Include accessibility needs (e.g., for PWD users).
+
+2. Tech Stack Selection
+Frontend: React.js (for dynamic UI)
+
+Backend: Flask / FastAPI / Node.js
+
+Database: PostgreSQL / MongoDB
+
+ML/NLP: HuggingFace Transformers, OpenAI API, spaCy
+
+Speech-to-Text: Google STT / Whisper / Azure
+
+Text-to-Speech: gTTS / Amazon Polly
+
+Hosting: AWS / Azure / Render
+
+Authentication: Firebase Auth / JWT
+
+3. Module Development
+🧠 AI/NLP Models:
+MCQ Scoring: Rule-based + ML validation
+
+Subjective Answers: BERT/RoBERTa + Semantic similarity + Grammar check
+
+Viva Voce:
+
+Convert audio → text (ASR)
+
+Use ChatGPT/OpenAI or fine-tuned LLM for question generation & response evaluation
+
+🎙️ Voice Integration:
+Implement Text-to-Speech (for bot questions)
+
+Implement Speech-to-Text (for user responses)
+
+4. APIs & Backend Logic
+GET /questions: Fetch interview questions dynamically
+
+POST /answer: Receive and score user responses
+
+POST /voice: Upload audio; transcribe + evaluate
+
+GET /result: View detailed evaluation (score + feedback)
+
+5. Frontend Development
+Candidate Dashboard: Start test, answer, upload voice
+
+Admin Panel: Upload questions, view candidate analytics
+
+Viva Screen: Real-time Q&A via voice
+
+Accessibility: Keyboard navigation, screen reader support
+
+6. Testing
+Unit tests (Pytest/Jest)
+
+Model accuracy evaluation
+
+Load testing for concurrent interviews
+
+7. Deployment
+Containerize using Docker
+
+CI/CD using GitHub Actions
+
+Deploy to cloud (AWS EC2 / Azure App Service)
+
+8. Monitoring & Feedback
+Logging: Errors, model confidence scores
+
+Analytics: Time taken, question difficulty
+
+Feedback loop: Improve model with real interview data
+
+🙋 User Workflow (Candidate Perspective)
+1. Login/Register
+Register or log in via OTP/email
+
+Select job role/skill test type
+
+2. Test Instructions
+Bot explains format via text or voice (with TTS)
+
+Duration and rules shown
+
+3. Interview Begins
+MCQ Round
+Bot asks MCQs (timed)
+
+User selects answers
+
+Subjective Round
+Bot asks descriptive questions
+
+User types or dictates answers (converted to text)
+
+Viva (Voice) Round
+Bot asks voice-based questions
+
+User answers via microphone
+
+Bot gives next question in real-time or after pause
+
+4. Submission
+After all rounds, candidate reviews & submits
+
+Audio + text answers saved to DB
+
+5. Feedback & Results
+Bot gives score + AI-generated feedback:
+
+Answer relevance
+
+Communication skills
+
+Grammar and confidence
+
+Optionally, show visual analytics (pie chart, radar cha
