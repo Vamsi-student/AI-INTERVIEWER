@@ -374,7 +374,7 @@ export default function Landing() {
             and unlocked their career potential
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex justify-center">
             <Button 
               size="lg"
               onClick={() => window.location.href = '/api/login'}
@@ -383,15 +383,6 @@ export default function Landing() {
               <Zap className="h-6 w-6 mr-3 group-hover:animate-pulse" />
               Get Started Now
               <Star className="h-6 w-6 ml-3" />
-            </Button>
-            
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-10 py-4 text-xl rounded-2xl font-semibold"
-            >
-              <Users className="h-6 w-6 mr-3" />
-              View Demo
             </Button>
           </div>
           
